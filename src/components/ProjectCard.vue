@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
   title: String,
+  folder: String,
   image: String,
   type: String,
   description: String,
@@ -12,10 +13,7 @@ const props = defineProps({
   >
     <a href="#">
       <div class="relative flex items-end overflow-hidden rounded-xl">
-        <img
-          :src="'/images/company_projects/' + image"
-          :alt="title + 'image'"
-        />
+        <img :src="'/images/' + folder + '/' + image" :alt="title + 'image'" />
         <div
           class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600"
         >
