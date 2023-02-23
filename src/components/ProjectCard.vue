@@ -12,7 +12,10 @@ const props = defineProps({
   >
     <a href="#">
       <div class="relative flex items-end overflow-hidden rounded-xl">
-        <img :src="image" :alt="title + 'image'" />
+        <img
+          :src="'/images/company_projects/' + image"
+          :alt="title + 'image'"
+        />
         <div
           class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600"
         >
@@ -41,7 +44,6 @@ const props = defineProps({
 
         <div class="mt-3 flex items-end justify-between">
           <p class="text-lg font-bold text-blue-500">{{ description }}</p>
-
         </div>
       </div>
     </a>

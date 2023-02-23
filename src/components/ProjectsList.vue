@@ -1,25 +1,27 @@
 <template>
   <div>
     <section class="py-10 bg-gray-100">
-      <h2 class="text-4xl font-bold text-center text-sky-900 mb-5">My recently work</h2>
+      <h2 class="text-4xl font-bold text-center text-sky-900 mb-5">
+        My recently work
+      </h2>
       <div
         class="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
       >
         <ProjectCard
           title="Kazali"
-          image="src/assets/images/company_projects/kazali.jpg"
+          image="kazali.jpg"
           type="Front/Back development"
           description="Property Management Application"
         />
         <ProjectCard
           title="Rose"
-          image="src/assets/images/company_projects/rose.png"
+          image="rose.png"
           type="Front/Back development"
           description="Picking and packing system"
         />
         <ProjectCard
           title="Flora"
-          image="src/assets/images/company_projects/flora.png"
+          image="flora.png"
           type="Backend development"
           description="Slack Bot"
         />

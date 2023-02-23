@@ -3,17 +3,10 @@ import Social from "../components/Social.vue";
 </script>
 <template>
   <div class="md:flex flex-row m-20">
-    <!-- <div class="md:w-3/5 mb-5">
-      <img
-        src="../assets/images/Yisus.jpg"
-        alt="MyPicture"
-        class="w-2/5 h-3/4 object-fill rounded-full mx-auto"
-      />
-    </div> -->
     <div class="w-full md:w-2/5 flex justify-center items-center mb-10">
       <div class="relative">
         <img
-          src="../assets/images/Yisus.jpg"
+          src="/images/Yisus.jpg"
           class="shadow-xl rounded-full align-middle lg:-ml-16 max-w-[350px]"
         />
       </div>
