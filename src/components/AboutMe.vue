@@ -2,8 +2,10 @@
 import Social from "../components/Social.vue";
 </script>
 <template>
-  <div class="md:flex flex-row m-20">
-    <div class="w-full md:w-2/5 flex justify-center items-center mb-10">
+  <div class="lg:flex flex-row m-20 min-[1200px]:mx-auto">
+    <div
+      class="w-full sm:mx-auto lg:m-0 md:w-2/5 flex justify-center items-center mb-10"
+    >
       <div class="relative">
         <img
           src="/images/Yisus.jpg"
@@ -11,7 +13,9 @@ import Social from "../components/Social.vue";
         />
       </div>
     </div>
-    <div class="text-sky-50 md:w-2/5 mx-auto md:m-20">
+    <div
+      class="text-sky-50 sm:w-4/5 lg:w-3/5 min-[1450px]:w-2/5 min-[1450px]:ml-5 mx-auto lg:m-20"
+    >
       <h1
         class="text-3xl font-bold block font-family: ui-monospace whitespace-nowrap"
       >
@@ -24,8 +28,8 @@ import Social from "../components/Social.vue";
         since 2020. I love challenges and coding to resolve them. The UI is the
         most important part for the user but at the same time is very important
         the logic behind of this, that is why i'm a FullStack Developer.
-        <Social />
       </p>
+      <Social />
     </div>
   </div>
 </template>
@@ -41,20 +45,8 @@ import Social from "../components/Social.vue";
     animation-iteration-count: infinite;
     overflow: hidden;
   }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
 }
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   h1 {
     display: block;
     font-family: monospace;
@@ -65,17 +57,16 @@ import Social from "../components/Social.vue";
     animation-iteration-count: infinite;
     overflow: hidden;
   }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
+}
+@keyframes typing {
+  from {
+    width: 0;
   }
+}
 
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 </style>

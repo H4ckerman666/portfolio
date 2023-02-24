@@ -1,12 +1,11 @@
 <template>
   <div
-    class="mx-auto grid max-w-6xl grid-cols-2 gap-6 p-6 lg:grid-cols-5 mt-5 justify-items-center"
+    class="mx-auto grid max-w-xs lg:max-w-md grid-cols-2 gap-6 pt-3 lg:grid-cols-5 mt-10 lg:mt-5 justify-items-center"
   >
     <a
       href="mailto:jesusroblesduana@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
-      class="mx-3"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +28,6 @@
       href="https://github.com/H4ckerman666"
       target="_blank"
       rel="noopener noreferrer"
-      class="mx-3"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +51,6 @@
       href="https://www.linkedin.com/in/jesus-roblesd/"
       target="_blank"
       rel="noopener noreferrer"
-      class="mx-3"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +76,6 @@
       href="https://wa.me/+525567456977"
       target="_blank"
       rel="noopener noreferrer"
-      class="mx-3"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +100,7 @@
       href="https://www.instagram.com/h4ckerman.dev/"
       target="_blank"
       rel="noopener noreferrer"
-      class="mx-3 col-span-2 lg:col-span-1"
+      class="col-span-2 lg:col-span-1"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
