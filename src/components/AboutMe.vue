@@ -1,5 +1,5 @@
 <script setup>
-import Social from "../components/Social.vue";
+import Social from "@/components/Social.vue";
 </script>
 <template>
   <div class="lg:flex flex-row m-20 min-[1200px]:mx-auto">

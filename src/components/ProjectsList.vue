@@ -1,5 +1,5 @@
 <script setup>
-import ProjectCard from "./ProjectCard.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 const props = defineProps({
   title: String,
   elements: Array,

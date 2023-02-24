@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div
     class="mx-auto grid max-w-xs lg:max-w-md grid-cols-2 gap-6 pt-3 lg:grid-cols-5 mt-10 lg:mt-5 justify-items-center"
@@ -122,5 +123,4 @@
     </a>
   </div>
 </template>
-<script setup></script>
 <style scoped></style>
