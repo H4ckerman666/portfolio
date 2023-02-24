@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row mt-5">
+  <div
+    class="mx-auto grid max-w-6xl grid-cols-2 gap-6 p-6 lg:grid-cols-4 mt-5 justify-items-center"
+  >
     <a
       href="https://github.com/H4ckerman666"
       target="_blank"
