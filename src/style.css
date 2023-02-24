@@ -9,11 +9,20 @@ body {
 @layer components {
     .typing {
         display: block;
-        font-family: monospace;
         white-space: nowrap;
-        border-right: 4px solid;
-        width: 24ch;
-        animation: typing 3s steps(24), blink 0.5s infinite step-end alternate;
+        border-right: 4px solid white;
+        width: 22ch;
+        animation: typing 3s steps(22), infinite step-end alternate;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+    }
+
+    .name-typing {
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid white;
+        width: 6ch;
+        animation: typing 1.8s steps(6), infinite step-end alternate;
         animation-iteration-count: infinite;
         overflow: hidden;
     }
@@ -24,9 +33,5 @@ body {
         }
     }
 
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-    }
+
 }

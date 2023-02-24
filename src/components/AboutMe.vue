@@ -17,9 +17,10 @@ import Social from "../components/Social.vue";
       class="text-sky-50 sm:w-4/5 lg:w-3/5 min-[1450px]:w-2/5 min-[1450px]:ml-5 mx-auto lg:m-20"
     >
       <h1
-        class="text-3xl font-bold block font-family: ui-monospace whitespace-nowrap"
+        class="text-3xl font-bold block font-family: ui-monospace whitespace-nowrap min-[600px]:typing"
       >
-        Hello! My name is <span class="text-sky-500">Jesus</span>
+        Hello! My name is
+        <span class="text-sky-500 max-[600px]:name-typing">Jesus</span>
       </h1>
       <h2 class="underline">Mid-level FullStack Developer</h2>
       <p class="mt-5 text-justify">
@@ -33,40 +34,4 @@ import Social from "../components/Social.vue";
     </div>
   </div>
 </template>
-<style scoped>
-@media (max-width: 600px) {
-  span {
-    display: block;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 6ch;
-    animation: typing 1.5s steps(6), blink 0.5s infinite step-end alternate;
-    animation-iteration-count: infinite;
-    overflow: hidden;
-  }
-}
-@media (min-width: 601px) {
-  h1 {
-    display: block;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 24ch;
-    animation: typing 3s steps(24), blink 0.5s infinite step-end alternate;
-    animation-iteration-count: infinite;
-    overflow: hidden;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-</style>
+<style scoped></style>
