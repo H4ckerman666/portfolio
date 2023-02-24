@@ -11,7 +11,7 @@ const props = defineProps({
   <article
     class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300"
   >
-    <a href="#">
+    <router-link :to="{ name: 'projectView', params: { id: '123' } }">
       <div class="relative flex items-end overflow-hidden rounded-xl">
         <img :src="'/images/' + folder + '/' + image" :alt="title + 'image'" />
         <div
@@ -44,7 +44,7 @@ const props = defineProps({
           <p class="text-lg font-bold text-blue-500">{{ description }}</p>
         </div>
       </div>
-    </a>
+    </router-link>
   </article>
 </template>
 <style scoped></style>
