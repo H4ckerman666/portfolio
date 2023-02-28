@@ -7,7 +7,7 @@ const routes = [
     component: () => import("@/components/Home.vue"),
   },
   {
-    path: "/project-view",
+    path: "/project-view/:id",
     name: "projectView",
     component: () => import("@/components/ProjectView.vue"),
     props: true,
