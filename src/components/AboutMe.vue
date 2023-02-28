@@ -1,8 +1,12 @@
 <script setup>
 import Social from "@/components/Social.vue";
+import DownloadButton from "./DownloadButton.vue";
 </script>
 <template>
-  <div class="lg:flex flex-row m-20 min-[1200px]:mx-auto">
+  <div class="mt-10 mb-10 lg:mb-5 mr-10 flex flex-column justify-end">
+    <DownloadButton />
+  </div>
+  <div class="lg:flex flex-row mx-20 mt-15 mb-10 min-[1200px]:mx-auto">
     <div
       class="w-full sm:mx-auto lg:m-0 md:w-2/5 flex justify-center items-center mb-10"
     >
