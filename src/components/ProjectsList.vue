@@ -18,7 +18,8 @@ console.log("🚀 ~ file: ProjectsList.vue:8 ~ folder:", props.folder);
       >
         <ProjectCard
           v-for="element in elements"
-          :key="element.image"
+          :key="element.id"
+          :id="element.id"
           :folder="folder"
           :title="element.title"
           :image="element.image"

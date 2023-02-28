@@ -1,5 +1,6 @@
 <script setup>
 const props = defineProps({
+  id: String,
   title: String,
   folder: String,
   image: String,
@@ -11,7 +12,7 @@ const props = defineProps({
   <article
     class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300"
   >
-    <router-link :to="{ name: 'projectView', params: { id: '123' } }">
+    <router-link :to="{ name: 'projectView', params: { id } }">
       <div class="relative flex items-end overflow-hidden rounded-xl">
         <img :src="'/images/' + folder + '/' + image" :alt="title + 'image'" />
         <div
