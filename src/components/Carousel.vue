@@ -1,9 +1,16 @@
 <script setup>
+const props = defineProps({
+  images: Array,
+  projectId: String,
+});
+const getPath = (image) => {
+  return `/images/projects/${props.projectId}/${image}`;
+};
 </script>
 <template>
   <div
     id="carouselExampleIndicators"
-    class="relative mx-48 mt-10"
+    class="relative"
     data-te-carousel-init
     data-te-carousel-slide
   >
@@ -44,7 +51,7 @@
         data-te-carousel-active
       >
         <img
-          src="/images/company-projects/flora.png"
+          :src="getPath(images[0])"
           class="block w-full"
           alt="Wild Landscape"
         />
@@ -53,18 +60,14 @@
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item
       >
-        <img
-          src="/images/company-projects/rose.png"
-          class="block w-full"
-          alt="Camera"
-        />
+        <img :src="getPath(images[1])" class="block w-full" alt="Camera" />
       </div>
       <div
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item
       >
         <img
-          src="/images/company-projects/kazali.jpg"
+          :src="getPath(images[2])"
           class="block w-full"
           alt="Exotic Fruits"
         />
