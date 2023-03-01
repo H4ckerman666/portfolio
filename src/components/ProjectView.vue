@@ -1,23 +1,23 @@
 <script setup>
 import Carousel from "./Carousel.vue";
-import { work, myProjects } from "@/data/";
+import BackButton from "./BackButton.vue";
+import { projects } from "@/data/";
 import { onBeforeMount, ref } from "vue";
 import Icon from "./Icon.vue";
-
-const project = ref("");
-
-onBeforeMount(() => {
-  const element = work.filter((element) => element.id === props.id);
-  project.value = element[0];
-  console.log("🚀 ~ file: ProjectView.vue:17 ~ props:", project.value);
-});
 
 const props = defineProps({
   id: String,
 });
+const project = ref("");
+
+onBeforeMount(() => {
+  const element = projects.filter((element) => element.id === props.id);
+  project.value = element[0];
+});
 </script>
 <template>
-  <header class="font-bold text-5xl text-center mt-10">
+  <BackButton class="ml-20 mt-5"/>
+  <header class="font-bold text-5xl text-center">
     <h1 class="text-sky-500">
       {{ project.title }}
     </h1>
@@ -27,27 +27,57 @@ const props = defineProps({
   <Carousel
     class="mx-5 lg:mx-40 my-10"
     :images="project.images"
-    :id="project.id"
+    :projectId="project.id"
   />
-  <section class="text-sky-50 mx-20 lg:mx-40 mb-10">
-    <h3 class="font-bold text-4xl mt-10">About this project</h3>
-    <ul class="mt-5 mx-5">
-      <li v-for="a in project.longDescription" :key="a" class="list-disc">
-        {{ a }}
-      </li>
-    </ul>
-    <h3 class="font-bold text-4xl mt-10">Technologies</h3>
-    <div
-      class="grid max-w-xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-7"
-    >
-      <Icon v-for="icon in project.technologies" :key="icon" :name="icon" />
+  <main class="text-sky-50 mx-10 lg:mx-40 mb-10">
+    <section class="md:grid grid-template justify-center gap-9 p-6 mx-auto">
+      <div>
+        <h3 class="font-bold text-3xl">About this project</h3>
+        <ul class="mt-5 mx-5">
+          <li v-for="a in project.longDescription" :key="a" class="list-disc">
+            {{ a }}
+          </li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-5 mt-5 md:mt-0">
+        <div>
+          <h3 class="font-bold text-3xl">Status</h3>
+          <p class="text-base">{{ project.status }}</p>
+          <p v-if="project.link !== ''" class="mt-5">
+            Visit
+            <a :href="project.link" class="text-sky-500">here</a>
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold text-3xl">App language</h3>
+          <p class="mt-5">
+            {{ project.language }}
+          </p>
+        </div>
+      </div>
+    </section>
+    <div>
+      <h3 class="font-bold text-3xl mt-5 text-center">Technologies</h3>
+      <div class="flex flex-wrap justify-around mt-5 lg:max-w-4xl mx-auto">
+        <Icon
+          v-for="icon in project.technologies"
+          :key="icon"
+          :name="icon"
+          class="m-5"
+        />
+      </div>
     </div>
-    <p class="font-bold mt-5 text-2xl">Status</p>
-    <p class="text-base">{{ project.status }}</p>
-    <p class="mt-5">
-      You can visit this project
-      <a :href="project.link" class="text-sky-500">here</a>
-    </p>
-  </section>
+    <div v-if="project.repository !== ''" class="mt-14">
+      <h3 class="font-bold mt-5 text-3xl text-center">GitHub repository</h3>
+      <p class="mt-5 text-center">
+        You can check the source code
+        <a :href="project.repository" class="text-sky-500">here</a>
+      </p>
+    </div>
+  </main>
 </template>
-<style scoped></style>
+<style scoped>
+.grid-template {
+  grid-template-columns: 40% 40%;
+}
+</style>
