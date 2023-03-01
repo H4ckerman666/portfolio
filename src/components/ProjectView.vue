@@ -22,7 +22,7 @@ const statusClass = computed(() => {
 });
 </script>
 <template>
-  <BackButton class="ml-20 mt-5" />
+  <BackButton class="md:ml-20 mt-5" />
   <header class="font-bold text-5xl text-center">
     <h1 class="text-sky-500">
       {{ project.title }}
