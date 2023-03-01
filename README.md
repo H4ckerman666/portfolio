@@ -1,8 +1,22 @@
-# Vue 3 + Vite
+# My portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Utility
 
-## Recommended IDE Setup
+This project was created to show my knowledge and some projects that i made
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-# adivina-el-pokemon
+## Technologies:
+
+- Vue
+- Tailwind
+- CSS
+- Vite
+- HTML5
+- JavaScript
+
+## App language
+
+English
+
+<br/>
+
+_Visit my portfolio <a href="https://h4ckerman666-portfolio.netlify.app/" target="_blank">here</a>_
