@@ -6,11 +6,6 @@ const props = defineProps({
   type: String,
   description: String,
 });
-console.log("🚀 ~ file: ProjectCard.vue:9 ~ props:", props);
-console.log(
-  "🚀 ~ file: ProjectCard.vue:9 ~ props:",
-  `/images/projects/${props.id}/${props.id}-1.png`
-);
 </script>
 <template>
   <article

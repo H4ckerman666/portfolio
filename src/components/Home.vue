@@ -5,7 +5,6 @@ import ProjectsList from "@/components/ProjectsList.vue";
 import { projects } from "@/data/";
 
 const work = projects.filter((element) => element.id.includes("w"));
-console.log("🚀 ~ file: Home.vue:8 ~ work:", work);
 const myProjects = projects.filter((element) => element.id.includes("m"));
 </script>
 <template>

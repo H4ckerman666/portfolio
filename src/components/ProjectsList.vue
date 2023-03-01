@@ -5,7 +5,6 @@ const props = defineProps({
   elements: Array,
   folder: String,
 });
-console.log("🚀 ~ file: ProjectsList.vue:8 ~ folder:", props.folder);
 </script>
 <template>
   <div>
