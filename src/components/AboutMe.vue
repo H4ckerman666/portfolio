@@ -12,7 +12,7 @@ import DownloadButton from "./DownloadButton.vue";
     >
       <div class="relative">
         <img
-          src="/images/Yisus.jpg"
+          src="/images/me.png"
           class="shadow-xl rounded-full align-middle lg:-ml-16 max-w-[350px]"
         />
       </div>
