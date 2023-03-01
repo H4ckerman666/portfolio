@@ -20,7 +20,6 @@ console.log("🚀 ~ file: ProjectsList.vue:8 ~ folder:", props.folder);
           v-for="element in elements"
           :key="element.id"
           :id="element.id"
-          :folder="folder"
           :title="element.title"
           :image="element.image"
           :type="element.type"

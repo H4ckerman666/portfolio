@@ -3,7 +3,7 @@ const projects = [
     id: "w1",
     description: "Property Management Application",
     image: "kazali.jpg",
-    images: ["kazali1.png", "kazali2.png", "kazali3.png"],
+    images: ["w1-1.png", "w1-2.png", "w1-3.png"],
     link: "https://kazali-b82d8.web.app/dashboard",
     longDescription: [
       "Sending notifications by email and WhatsApp to the clients of the application",
@@ -24,7 +24,7 @@ const projects = [
     id: "w2",
     description: "Picking and packing system",
     image: "rose.png",
-    images: ["rose1.png", "rose2.png", "rose3.png"],
+    images: ["w2-1.png", "w2-2.png", "w2-3.png"],
     link: "https://pycomedical.pythonanywhere.com/",
     longDescription: [
       "Logistics system for order picking and packaging",
@@ -55,7 +55,7 @@ const projects = [
     id: "w3",
     description: "Slack Bot",
     image: "flora.png",
-    images: ["flora1.png", "flora2.png", "flora3.png"],
+    images: ["w3-1.png", "w3-2.png", "w3-3.png"],
     link: "",
     longDescription: [
       "Modification of existing software to correct coding errors",
@@ -75,7 +75,7 @@ const projects = [
     id: "m1",
     description: "Expenditure Control Application",
     image: "expenditure-control.png",
-    images: ["ec1.png", "ec2.png", "ec3.png"],
+    images: ["m1-1.png", "m1-2.png", "m1-3.png"],
     link: "https://expenditure-control.netlify.app/",
     longDescription: [
       "Modification of existing software to correct coding errors",
@@ -98,7 +98,7 @@ const projects = [
     type: "Front development",
     language: "English",
     description: "Crypto Currency Quote",
-    images: ["cc1.png", "cc2.png", "cc3.png"],
+    images: ["w2-1.png", "w2-2.png", "w2-3.png"],
     link: "https://expenditure-control.netlify.app/",
     longDescription: [
       "Modification of existing software to correct coding errors",
@@ -119,7 +119,7 @@ const projects = [
     language: "Spanish",
     description: "Veterinary Appointments",
 
-    images: ["ec1.png", "ec2.png", "ec3.png"],
+    images: ["m3-1.png", "m3-2.png", "m3-3.png"],
     link: "https://expenditure-control.netlify.app/",
     longDescription: [
       "Modification of existing software to correct coding errors",
