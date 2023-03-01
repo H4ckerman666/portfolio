@@ -85,7 +85,7 @@ const getPath = (image) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="currentColor"
+          stroke="#0ea5e9"
           class="h-6 w-6"
         >
           <path
@@ -112,7 +112,7 @@ const getPath = (image) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="currentColor"
+          stroke="#0ea5e9"
           class="h-6 w-6"
         >
           <path
