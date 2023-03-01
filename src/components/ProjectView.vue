@@ -2,7 +2,7 @@
 import Carousel from "./Carousel.vue";
 import BackButton from "./BackButton.vue";
 import { projects } from "@/data/";
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, ref, computed } from "vue";
 import Icon from "./Icon.vue";
 
 const props = defineProps({
@@ -14,9 +14,15 @@ onBeforeMount(() => {
   const element = projects.filter((element) => element.id === props.id);
   project.value = element[0];
 });
+
+const statusClass = computed(() => {
+  return project.value.status === "Public"
+    ? "text-base mt-3 ml-3 text-green-500"
+    : "text-base mt-3 ml-3 text-red-500";
+});
 </script>
 <template>
-  <BackButton class="ml-20 mt-5"/>
+  <BackButton class="ml-20 mt-5" />
   <header class="font-bold text-5xl text-center">
     <h1 class="text-sky-500">
       {{ project.title }}
@@ -42,15 +48,15 @@ onBeforeMount(() => {
       <div class="grid grid-cols-2 gap-5 mt-5 md:mt-0">
         <div>
           <h3 class="font-bold text-3xl">Status</h3>
-          <p class="text-base">{{ project.status }}</p>
-          <p v-if="project.link !== ''" class="mt-5">
+          <p :class="statusClass">{{ project.status }}</p>
+          <p v-if="project.link !== ''" class="mt-2 ml-3">
             Visit
-            <a :href="project.link" class="text-sky-500">here</a>
+            <a :href="project.link" class="text-sky-500">here </a>!
           </p>
         </div>
         <div>
           <h3 class="font-bold text-3xl">App language</h3>
-          <p class="mt-5">
+          <p class="mt-5 ml-3">
             {{ project.language }}
           </p>
         </div>
