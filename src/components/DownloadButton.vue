@@ -64,7 +64,7 @@
   border-radius: 4px;
   z-index: 1;
   background-color: #242a35;
-  border: solid 1px #e8e8e82d;
+  /* border: solid 1px #e8e8e82d; */
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
