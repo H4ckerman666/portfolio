@@ -36,6 +36,17 @@ const statusClass = computed(() => {
     :projectId="project.id"
   />
   <main class="text-sky-50 mx-10 lg:mx-40 mb-10">
+    <div class="m-0 md:mb-10">
+      <h3 class="font-bold text-3xl mt-5 text-center">Technologies</h3>
+      <div class="flex flex-wrap justify-around mt-5 lg:max-w-4xl mx-auto">
+        <Icon
+          v-for="icon in project.technologies"
+          :key="icon"
+          :name="icon"
+          class="m-5"
+        />
+      </div>
+    </div>
     <section class="md:grid grid-template justify-center gap-9 p-6 mx-auto">
       <div>
         <h3 class="font-bold text-3xl">About this project</h3>
@@ -62,18 +73,7 @@ const statusClass = computed(() => {
         </div>
       </div>
     </section>
-    <div>
-      <h3 class="font-bold text-3xl mt-5 text-center">Technologies</h3>
-      <div class="flex flex-wrap justify-around mt-5 lg:max-w-4xl mx-auto">
-        <Icon
-          v-for="icon in project.technologies"
-          :key="icon"
-          :name="icon"
-          class="m-5"
-        />
-      </div>
-    </div>
-    <div v-if="project.repository !== ''" class="mt-14">
+    <div v-if="project.repository !== ''" class="mt-5">
       <h3 class="font-bold mt-5 text-3xl text-center">GitHub repository</h3>
       <p class="mt-5 text-center">
         You can check the source code

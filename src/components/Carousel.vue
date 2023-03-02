@@ -43,10 +43,10 @@ const getPath = (image) => {
       ></button>
     </div>
     <div
-      class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+      class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] bg-white rounded-lg"
     >
       <div
-        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none p-2"
         data-te-carousel-item
         data-te-carousel-active
       >
@@ -57,13 +57,13 @@ const getPath = (image) => {
         />
       </div>
       <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none p-2"
         data-te-carousel-item
       >
         <img :src="getPath(images[1])" class="block w-full" alt="Camera" />
       </div>
       <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none p-2"
         data-te-carousel-item
       >
         <img
