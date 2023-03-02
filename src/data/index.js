@@ -66,7 +66,7 @@ const projects = [
     ],
     repository: "",
     status: "Private",
-    technologies: ["docker", "python", "firebase", "flask", "git", "github"],
+    technologies: ["docker", "python", "firebase", "git", "github"],
     title: "Flora",
     type: "Backend development",
     language: "Spanish",

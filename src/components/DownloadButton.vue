@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-  <a  href="/cv/CV_2023.pdf" class="download-button" download>
+  <a  href="/cv/English_CV_2023.pdf" class="download-button" download>
     <div class="docs">
       <svg
         class="css-i6dzq1"
