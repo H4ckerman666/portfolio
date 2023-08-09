@@ -4,6 +4,10 @@ import BackButton from "./BackButton.vue";
 import { projects } from "@/data/";
 import { onBeforeMount, ref, computed } from "vue";
 import Icon from "./Icon.vue";
+import { useLanguage } from "@/stores/language";
+
+const store = useLanguage();
+store.changeLanguage();
 
 const props = defineProps({
   id: String,
@@ -11,8 +15,10 @@ const props = defineProps({
 const project = ref("");
 
 onBeforeMount(() => {
-  const element = projects.filter((element) => element.id === props.id);
-  project.value = element[0];
+  const id = props.id;
+  const type = id.includes("m") ? "owner" : "work";
+  const elements = store.isEnglish ? projects.en[type] : projects.es[type];
+  project.value = elements.filter((element) => element.id === id)[0];
 });
 
 const statusClass = computed(() => {
@@ -20,6 +26,9 @@ const statusClass = computed(() => {
     ? "text-base mt-3 ml-3 text-green-500"
     : "text-base mt-3 ml-3 text-red-500";
 });
+const homeText = {
+  recentlyWork: store.isEnglish ? "My recently work" : "Mi trabajo reciente",
+};
 </script>
 <template>
   <BackButton class="md:ml-20 mt-5" />
@@ -73,7 +82,18 @@ const statusClass = computed(() => {
         </div>
       </div>
     </section>
-    <div v-if="project.repository !== ''" class="mt-5">
+    <div>
+      <h3 class="font-bold text-3xl mt-5 text-center">Technologies</h3>
+      <div class="flex flex-wrap justify-around mt-5 lg:max-w-4xl mx-auto">
+        <Icon
+          v-for="icon in project.technologies"
+          :key="icon"
+          :name="icon"
+          class="m-5"
+        />
+      </div>
+    </div>
+    <div v-if="project.repository !== ''" class="mt-14">
       <h3 class="font-bold mt-5 text-3xl text-center">GitHub repository</h3>
       <p class="mt-5 text-center">
         You can check the source code

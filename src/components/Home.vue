@@ -3,19 +3,37 @@ import AboutMe from "@/components/AboutMe.vue";
 import Footer from "@/components/Footer.vue";
 import ProjectsList from "@/components/ProjectsList.vue";
 import { projects } from "@/data/";
+import { computed } from "vue";
+import { useLanguage } from "@/stores/language";
 
-const work = projects.filter((element) => element.id.includes("w"));
-const myProjects = projects.filter((element) => element.id.includes("m"));
+const store = useLanguage();
+
+const work = computed(() =>
+  store.isEnglish ? projects.en.work : projects.es.work
+);
+
+const myProjects = computed(() =>
+  store.isEnglish ? projects.en.owner : projects.es.owner
+);
+
+const projectsTitle = computed(() => {
+  return {
+    recentlyWork: store.isEnglish ? "My recently work" : "Mi trabajo reciente",
+    myProjects: store.isEnglish
+      ? "My personal projects"
+      : "Mis proyectos personales",
+  };
+});
 </script>
 <template>
   <AboutMe />
   <ProjectsList
-    title="My recently work"
+    :title="projectsTitle.recentlyWork"
     :elements="work"
     folder="company-projects"
   />
   <ProjectsList
-    title="My personal projects"
+    :title="projectsTitle.myProjects"
     :elements="myProjects"
     folder="my-projects"
   />
