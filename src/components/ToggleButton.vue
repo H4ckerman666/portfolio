@@ -8,6 +8,7 @@
           name="dark-mode"
           id="dark-toggle"
           class="checkbox hidden"
+          v-model="toggleStatus"
           @click="chanceLanguage"
         />
         <div
@@ -22,27 +23,30 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { onBeforeMount, ref } from "vue";
 import { useLanguage } from "@/stores/language";
 const esClass = ref("mr-3 font-medium text-sky-300");
 const enClass = ref("ml-3 font-medium text-white");
+const toggleStatus = ref(false);
+
+onBeforeMount(() => {
+  toggleStatus.value = store.isEnglish ? true : false;
+});
 
 const store = useLanguage();
 const chanceLanguage = () => {
   store.changeLanguage();
-  enClass.value =
-    store.language === "en"
-      ? "ml-3 font-medium text-sky-300"
-      : "ml-3 font-medium text-white";
-  esClass.value =
-    store.language === "en"
-      ? "mr-3 font-medium text-white"
-      : "mr-3 font-medium text-sky-300";
+  enClass.value = store.isEnglish
+    ? "ml-3 font-medium text-sky-300"
+    : "ml-3 font-medium text-white";
+  esClass.value = store.isEnglish
+    ? "mr-3 font-medium text-white"
+    : "mr-3 font-medium text-sky-300";
 };
 </script>
 <style>
 input:checked ~ .dot {
   transform: translateX(100%);
-  background-color: #7ACCF4;
+  background-color: #7accf4;
 }
 </style>

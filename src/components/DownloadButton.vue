@@ -1,7 +1,18 @@
 <script setup>
+import { computed } from "vue";
+import { useLanguage } from "@/stores/language";
+
+const store = useLanguage();
+
+const downloadText = computed(() => {
+  return store.isEnglish ? "Download CV" : "Descargar CV";
+});
+const downloadCv = computed(() => {
+  return store.isEnglish ? "/cv/English_CV_2023.pdf" : "/cv/CV_2023.pdf";
+});
 </script>
 <template>
-  <a  href="/cv/English_CV_2023.pdf" class="download-button" download>
+  <a :href="downloadCv" class="download-button" download>
     <div class="docs">
       <svg
         class="css-i6dzq1"
@@ -22,7 +33,7 @@
         <line y2="17" x2="8" y1="17" x1="16"></line>
         <polyline points="10 9 9 9 8 9"></polyline>
       </svg>
-      Download CV
+      {{ downloadText }}
     </div>
     <div class="download">
       <svg
