@@ -1,6 +1,7 @@
 <script setup>
 import AboutMe from "@/components/AboutMe.vue";
 import Footer from "@/components/Footer.vue";
+import Courses from "@/components/Courses.vue";
 import ProjectsList from "@/components/ProjectsList.vue";
 import { projects } from "@/data/";
 import { computed } from "vue";
@@ -37,6 +38,7 @@ const projectsTitle = computed(() => {
     :elements="myProjects"
     folder="my-projects"
   />
+  <Courses/>
   <Footer />
 </template>
 
